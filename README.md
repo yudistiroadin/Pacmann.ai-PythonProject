@@ -56,3 +56,20 @@ flowchart TD;
     V-->R[menampilkan total belanja setelah diskon];
     R-->S([Selesai]);
 ```
+## Fungsi yang dipakai
+
+###### 1. Memulai/menginisiasi transaksi
+   init(), memulai class Transaction
+   dict_txn(dict) = dictionary yang menyimpan data transaksi;
+   txn_valid (boolean) = untuk memvalidasi data yang diinput ke dalam dictionary (True/False);
+   
+###### 2. Menambah item yang akan dibeli
+   add_item([<nama item>, <jumlah item>, <harga per item>]), menambah barang yang akan dibeli
+   nama item(tipe: string)    = nama dari item yang hendak dibeli
+   jumlah item(tipe: int)     = jumlah item yang akan dibeli
+   harga per item(tipe: int)  = harga/item terkait
+
+###### 3. Mengubah, memperbaiki daftar pembelian
+   update_item([<nama item>, <update nama item>])
+   nama item(string)          = nama item yang ingin diganti
+   
