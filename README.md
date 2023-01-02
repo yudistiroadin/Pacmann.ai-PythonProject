@@ -45,13 +45,13 @@ flowchart TD;
     J--Ya-->K[menghitung total belanja dengan fungsi total_price];
     J--Tidak-->E;
     K-->L{total belanja>500.000?};
-    L-->M[diskon 10%];
+    L--Ya-->M[diskon 10%];
     M-->V(( ));
-    K-->N{total belanja>300.000>=500.000?};
-    N-->O[diskon 8%];
+    L--Tidak-->N{total belanja>300.000>=500.000?};
+    N--Ya-->O[diskon 8%];
     O-->V;
-    K-->P{total belanja>200.000>=300.000?};
-    P-->Q[diskon 5%];
+    N--Tidak-->P{total belanja>200.000>=300.000?};
+    P--Ya-->Q[diskon 5%];
     Q-->V
     V-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
