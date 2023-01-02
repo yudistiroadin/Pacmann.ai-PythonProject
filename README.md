@@ -28,7 +28,7 @@ Alur belanja pada Swakasir adalah sebagai berikut:
   
 ```mermaid
 flowchart TD;
-    A([start])-->B[membuat ID transaksi: transaction];
+    A([Mulai])-->B[membuat ID transaksi: transaction];
     B-->C[memasukkan item: add_item];
     C-->D{ingin mengubah data?};
     D--Ya-->E[update nama/jumlah/harga: update_item];
@@ -54,5 +54,5 @@ flowchart TD;
     P--Ya-->Q[diskon 5%];
     Q-->V
     V-->R[menampilkan total belanja setelah diskon];
-    R-->S([selesai]);
+    R-->S([Selesai]);
 ```
