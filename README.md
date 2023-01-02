@@ -58,18 +58,56 @@ flowchart TD;
 ```
 ## Fungsi yang dipakai
 
-###### 1. Memulai/menginisiasi transaksi
-   init(), memulai class Transaction
-   dict_txn(dict) = dictionary yang menyimpan data transaksi;
-   txn_valid (boolean) = untuk memvalidasi data yang diinput ke dalam dictionary (True/False);
+###### 1. Customer membuat ID transaksi
+   trnsct_123 = Transaction(), memulai class Transaction
    
 ###### 2. Menambah item yang akan dibeli
-   add_item([<nama item>, <jumlah item>, <harga per item>]), menambah barang yang akan dibeli
+   add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli
    nama item(tipe: string)    = nama dari item yang hendak dibeli
    jumlah item(tipe: int)     = jumlah item yang akan dibeli
    harga per item(tipe: int)  = harga/item terkait
 
 ###### 3. Mengubah, memperbaiki daftar pembelian
-   update_item([<nama item>, <update nama item>])
-   nama item(string)          = nama item yang ingin diganti
+   a. Mengubah nama item
+   update_item_name([nama item, update nama item])
+    nama item(string)          = nama item yang namanya ingin diganti
+    update nama item(string)   = nama baru item
+    
+   b. Mengubah jumlah item
+   update_item_qty([nama item, update jumlah item])
+    nama item(string)          = nama item yang jumlahnya ingin diganti
+    update jumlah item(int)    = jumlah baru item 
+  
+   c. Mengubah harga item
+   update_item_price([nama item, update harga item])
+    nama item(string)          = nama item yang harganya ingin diganti
+    update harga item(int)     = harga baru item
    
+###### 4. Membatalkan pembelian item
+   a. Menghapus salah satu item:
+   delete_item(nama item)
+    nama item(string)         = nama item yang ingin dihapus
+   b. Menghapus semua atau mengulang transaksi
+   reset_transaction()
+   
+###### 5. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary
+  check_order(), dengan ketentuan:
+  a. Jika tidak ada kesalahan input, maka muncul pesan "**Pesanan sudah benar**";
+  b. Jika ada kesalahan input, maka muncul pesan "**Terdapat kesalahan input**";
+  c. Setelah memvalidasi input, keluarlah output pesanan yang sudah dibeli.
+  
+###### 6. Setelah pengecekan, customer menghitung total belanja
+  total_price(), dengan ketentuan jika:
+  a. Total belanja >Rp. 200.000, maka diskon 5%;
+  b. Total belanja >Rp. 300.000, maka diskon 8%;
+  c. Total belanja >Rp. 500.000, maka diskon 10%.
+ 
+## Demonstrasi
+  1. Menambah Item
+     input:
+     transaksi = c.Transaction()
+     transaksi.add_item("Mie Instan", 2, 10_000)
+     trnasaksi.add_item("Shampo", 1, 7_500)
+     
+     output:
+     Menamb
