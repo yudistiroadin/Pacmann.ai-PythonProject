@@ -44,16 +44,12 @@ Alur belanja pada Swakasir adalah sebagai berikut:
     J--Ya-->K[menghitung total belanja dengan fungsi total_price];
     J--Tidak-->E;
     K-->L{total belanja>500.000?};
-    L--Ya-->M[diskon 10%];
-    M-->V(( ));
-    L--Tidak-->V;
+    L-->M[diskon 10%];
+    M-->R;
     K-->N{total belanja>300.000>=500.000?};
-    N--Ya-->O[diskon 8%];
-    O-->V;
-    N--Tidak-->V;
+    N-->O[diskon 8%];
+    O-->R;
     K-->P{total belanja>200.000>=300.000?};
-    P--Tidak-->V;
-    P--Ya-->Q[diskon 5%];
-    Q-->V
-    V-->R[menampilkan total belanja setelah diskon];
+    P-->Q[diskon 5%];
+    Q-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
