@@ -28,17 +28,17 @@ Alur belanja pada Swakasir adalah sebagai berikut:
   
 ```mermaid
 flowchart TD;
-    A([start])-->B[membuat ID transaksi dengan class Transaction];
-    B-->C[memasukkan item dengan fungsi add_item];
-    C-->D{ada data yang ingin diubah?};
-    D--Ya-->E[update nama/jumlah/harga dengan fungsi update_item];
+    A([start])-->B[membuat ID transaksi: Transaction()];
+    B-->C[memasukkan item: add_item];
+    C-->D{ingin mengubah data?};
+    D--Ya-->E[update nama/jumlah/harga: update_item];
     E-->T(( ));
     D--Tidak-->T;
-    T-->F{ada item yang ingin dibatalkan?};
-    F--Ya-->G[hapus item dengan fungsi delete_item atau reset_transaction];
+    T-->F{ingin membatalkan item?};
+    F--Ya-->G[hapus item: delete_item, ulangi transaksi: reset_transaction];
     G-->U(( ));
-    U-->H{masih ada item yang ingin ditambahkan?};
     F--Tidak-->U;
+    U-->H{ingin menambah item?};
     H--Ya-->C;
     H--Tidak-->I[mengecek dan menampilkan pesanan dengan fungsi check_order];
     I-->J{input sudah benar?};
