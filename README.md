@@ -54,6 +54,6 @@ Alur belanja pada Swakasir adalah sebagai berikut:
     K-->P{total belanja>200.000>=300.000?};
     P--Tidak-->V;
     P--Ya-->Q[diskon 5%];
-    Q-->V;
+    Q-->V
     V-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
