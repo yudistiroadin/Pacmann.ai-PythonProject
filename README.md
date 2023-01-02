@@ -46,12 +46,13 @@ flowchart TD;
     J--Tidak-->E;
     K-->L{total belanja>500.000?};
     L-->M[diskon 10%];
-    M-->R;
+    M-->V(( ));
     K-->N{total belanja>300.000>=500.000?};
     N-->O[diskon 8%];
-    O-->R;
+    O-->V;
     K-->P{total belanja>200.000>=300.000?};
     P-->Q[diskon 5%];
-    Q-->R[menampilkan total belanja setelah diskon];
+    Q-->V
+    V-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
 ```
