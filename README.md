@@ -57,7 +57,6 @@ flowchart TD;
     Q-->X(( ))
     X-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
-
     X-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
 
