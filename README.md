@@ -26,7 +26,7 @@ Alur belanja pada Swakasir adalah sebagai berikut:
   b. total belanja > Rp. 300.000, maka diskon 8%;
   c. total belanja  > Rp. 500.000, maka diskon 10%.
   
-  flowchart TD;
+flowchart TD;
     A([start])-->B[membuat ID transaksi dengan class Transaction];
     B-->C[memasukkan item dengan fungsi add_item];
     C-->D{ada data yang ingin diubah?};
@@ -55,6 +55,9 @@ Alur belanja pada Swakasir adalah sebagai berikut:
     P--Tidak-->X;
     P--Ya-->Q[diskon 5%];
     Q-->X(( ))
+    X-->R[menampilkan total belanja setelah diskon];
+    R-->S([selesai]);
+
     X-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
 
