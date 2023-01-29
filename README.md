@@ -32,7 +32,7 @@ flowchart TD;
     B-->C[memasukkan item: add_item];
     C-->D{ingin mengubah data?};
     D--Ya-->E[update nama/jumlah/harga: update_item];
-    E-->T(( ));
+    E-->TI(( ));
     D--Tidak-->TI;
     TI-->F{ingin membatalkan item?};
     F--Ya-->G[hapus item: delete_item, ulangi transaksi: reset_transaction];
