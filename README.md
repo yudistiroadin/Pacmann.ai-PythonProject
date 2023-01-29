@@ -53,7 +53,7 @@ flowchart TD;
     N--Tidak-->P{total belanja>300.000>=500.000?};
     P--Ya-->Q[diskon 8%]
     Q-->V;
-    P--Tidak-->T[total belanja >500.000];
+    P--Tidak-->T{total belanja >500.000};
     T--Ya-->Z[diskon 10%];
     Z-->V;
     V-->R[menampilkan total belanja setelah diskon];
