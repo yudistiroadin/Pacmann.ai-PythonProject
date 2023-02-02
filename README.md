@@ -109,13 +109,17 @@ flowchart TD;
  
 ## Demonstrasi
 Memasukkan ID transaksi:
-
 id_1 = Transaction("Yudis")
+
   1. Menambah item: add_item()
+     
      input:
+      
       id_1.add_item("Ayam Goreng", 2, 20_000)
       id_1.add_item("Pasta Gigi", 3, 15_000)
+     
      output:
+            
             Nama item Jumlah item Harga item  Total harga
        1      Ayam Goreng         2.0    20000.0      40000.0
        2       Pasta Gigi         3.0    15000.0      45000.0
