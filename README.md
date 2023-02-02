@@ -112,12 +112,9 @@ Memasukkan ID transaksi:
 id_1 = Transaction("Yudis")
 
   1. Menambah item: add_item()
-     
      input:
-      
       id_1.add_item("Ayam Goreng", 2, 20_000)
-      id_1.add_item("Pasta Gigi", 3, 15_000)
-     
+      id_1.add_item("Pasta Gigi", 3, 15_000)   
      output:
             
             Nama item Jumlah item Harga item  Total harga
