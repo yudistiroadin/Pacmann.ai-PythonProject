@@ -109,6 +109,7 @@ flowchart TD;
  
 ## Demonstrasi
 Memasukkan ID transaksi:
+
 id_1 = Transaction("Yudis")
   1. Menambah item: add_item()
      input:
