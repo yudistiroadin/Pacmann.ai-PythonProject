@@ -18,11 +18,12 @@ Alur belanja pada Super Cashier adalah sebagai berikut:
   a. menghapus pilihan belanjanya dengan delete_item(), atau;
   b. reset seluruh transaksi dengan reset_transaction().
 5. Jika customer sudah selesai berbelanja online, namun masih ragu apakah harga & nama barang sudah benar atau belum, bisa melakukan cek dengan check_order(), dengan ketentuan:
-  a. mengeluarkan pesan "**Pesanan sudah benar**" berarti tidak ada kesalahan input;
-  b. mengeluarkan pesan "**Terdapat kesalahan input data**" berarti terdapat kesalahan input;
+  a. mengeluarkan pesan "Jumlah & harga item sudah sesuai" berarti tidak ada kesalahan input;
+  b. mengeluarkan pesan "Warning: Jumlah/Harga item tidak boleh minus!" berarti terdapat kesalahan input;
   c. mengeluarkan output pemesanan apa saja yang sudah dibeli.
 6. Customer bisa menghitung total belanja yang sudah dibeli, dengan method total_price. Terdapat ketentuan:
-  a. jika total belanja > Rp. 200.000, maka mendapat diskon 5%;
+  a. Jika total belanja <= Rp. 200.000, maka tidak mendapatkan diskon;
+  a. total belanja > Rp. 200.000, maka mendapat diskon 5%;
   b. total belanja > Rp. 300.000, maka diskon 8%;
   c. total belanja  > Rp. 500.000, maka diskon 10%.
   
@@ -95,22 +96,130 @@ flowchart TD;
    
 ###### 5. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary
   check_order(), dengan ketentuan:
-  a. Jika tidak ada kesalahan input, maka muncul pesan "**Pesanan sudah benar**";
-  b. Jika ada kesalahan input, maka muncul pesan "**Terdapat kesalahan input**";
+  a. Jika tidak ada kesalahan input, maka muncul pesan "Jumlah & harga item sudah sesuai.";
+  b. Jika ada kesalahan input, maka muncul pesan "Warning: Jumlah item tidak boleh minus!" & "Warning: Harga item tidak boleh minus!";
   c. Setelah memvalidasi input, keluarlah output pesanan yang sudah dibeli.
   
 ###### 6. Setelah pengecekan, customer menghitung total belanja
   total_price(), dengan ketentuan jika:
-  a. Total belanja >Rp. 200.000, maka diskon 5%;
-  b. Total belanja >Rp. 300.000, maka diskon 8%;
-  c. Total belanja >Rp. 500.000, maka diskon 10%.
+  a. Total belanja <= Rp. 200.000, maka tidak mendapatkan diskon;
+  b. Total belanja >Rp. 200.000, maka diskon 5%;
+  c. Total belanja >Rp. 300.000, maka diskon 8%;
+  d. Total belanja >Rp. 500.000, maka diskon 10%.
  
 ## Demonstrasi
-  1. Menambah Item
+Memasukkan ID transaksi:
+id_1 = Transaction("Yudis")
+  1. Menambah item: add_item()
      input:
-     transaksi = c.Transaction()
-     transaksi.add_item("Mie Instan", 2, 10_000)
-     trnasaksi.add_item("Shampo", 1, 7_500)
-     
+      id_1.add_item("Ayam Goreng", 2, 20_000)
+      id_1.add_item("Pasta Gigi", 3, 15_000)
      output:
-     Menamb
+            Nama item Jumlah item Harga item  Total harga
+       1      Ayam Goreng         2.0    20000.0      40000.0
+       2       Pasta Gigi         3.0    15000.0      45000.0
+       Total            -           -          -      85000.0
+       Item Pasta Gigi telah ditambahkan ke dalam daftar pesanan.
+    
+  2. Menghapus item: delete_item()
+      input:
+       id_1.delete_item("Pasta Gigi")
+      output:
+             Nama item Jumlah item Harga item  Total harga
+       1      Ayam Goreng         2.0    20000.0      40000.0
+       Total            -           -          -      40000.0
+       Item Pasta Gigi telah dihapus dari daftar pesanan.
+      
+  3. Mengatur ulang transaksi: reset_transaction()
+      input:
+       id_1.reset_transaction("Yudis")
+      output:
+       Semua pesanan sudah dikosongkan.
+      
+  4. Mengecek pesanan, memastikan sudah dikosongkan: check_order()
+      input:
+       id_1.check_order("Yudis")
+      output:
+             Nama item Jumlah item Harga item  Total harga
+       Total         -           -          -          0.0
+      
+  5. Mengecek harga akhir & perolehan diskon
+     Isi kembali pesanan
+      input:
+       id_1.add_item("Ayam Kampung", 20, 85_000)
+       id_1.add_item("Kambing", 10, 6_000_000)
+       id_1.add_item("Lele", 500, 2_500)
+      output:
+              Nama item Jumlah item Harga item  Total harga
+       1      Ayam Kampung        20.0    85000.0    1700000.0
+       2           Kambing        10.0  6000000.0   60000000.0
+       3              Lele       500.0     2500.0    1250000.0
+       Total             -           -          -   62950000.0
+       Item Lele telah ditambahkan ke dalam daftar pesanan.
+      
+      Melihat harga akhir & perolehan diskon: total_price()
+       input:
+        id_1.total_price("Yudis")
+       output:
+        Pesanan atas nama: Yudis     
+        Selamat! Pembeli a/n Yudis mendapat diskon sebesar 10%
+        Jumlah harga belanja sebelum diskon sebesar: Rp. 62,950,000
+        Besar nominal diskon yang didapat sebesar  : Rp. 6,295,000.0
+        Harga setelah diskon menjadi sebesar       : Rp. 56,655,000.0
+   
+  6. Jika ada nilai belanjaan yang tidak wajar (misal jumlah atau harga minus)
+      input:
+       id_1.add_item("Sapi", -20, -15_000_000)
+       id_1.check_order("Yudis")
+      output:
+                 Nama item Jumlah item  Harga item  Total harga
+       1      Ayam Kampung        20.0     85000.0    1700000.0
+       2           Kambing        10.0   6000000.0   60000000.0
+       3              Lele       500.0      2500.0    1250000.0
+       4              Sapi       -20.0 -15000000.0  300000000.0
+       Total             -           -           -  362950000.0
+       Item Sapi telah ditambahkan ke dalam daftar pesanan.
+       
+                 Nama item Jumlah item  Harga item  Total harga
+       1      Ayam Kampung        20.0     85000.0    1700000.0
+       2           Kambing        10.0   6000000.0   60000000.0
+       3              Lele       500.0      2500.0    1250000.0
+       4              Sapi       -20.0 -15000000.0  300000000.0
+       Total             -           -           -  362950000.0
+       Warning: Jumlah item tidak boleh minus!
+       Warning: Harga item tidak boleh minus!
+       
+  7. Memperbaiki nilai jumlah item: update_item_qty()
+      input:
+       id_1.update_item_qty("Sapi", 20)
+      output:
+                 Nama item Jumlah item  Harga item  Total harga
+       1      Ayam Kampung        20.0     85000.0    1700000.0
+       2           Kambing        10.0   6000000.0   60000000.0
+       3              Lele       500.0      2500.0    1250000.0
+       4              Sapi        20.0 -15000000.0 -300000000.0
+       Total             -           -           - -237050000.0
+       Jumlah item Sapi telah diubah menjadi sebanyak 20.
+       
+  8. Memperbaiki nilai harga item: update_item_price()
+      input:
+       id_1.update_item_price("Sapi", 15_000_000)
+      output:
+              Nama item Jumlah item  Harga item  Total harga
+       1      Ayam Kampung        20.0     85000.0    1700000.0
+       2           Kambing        10.0   6000000.0   60000000.0
+       3              Lele       500.0      2500.0    1250000.0
+       4              Sapi        20.0  15000000.0  300000000.0
+       Total             -           -           -  362950000.0
+       Harga item Sapi telah diubah menjadi sebesar Rp. 15,000,000.
+     Cek kembali pesanan: check_order()
+      input:
+       id_1.check_order("Yudis")
+      output:
+              Nama item Jumlah item  Harga item  Total harga
+       1      Ayam Kampung        20.0     85000.0    1700000.0
+       2           Kambing        10.0   6000000.0   60000000.0
+       3              Lele       500.0      2500.0    1250000.0
+       4              Sapi        20.0  15000000.0  300000000.0
+       Total             -           -           -  362950000.0
+       Jumlah & harga item sudah sesuai.
