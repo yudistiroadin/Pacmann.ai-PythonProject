@@ -110,7 +110,7 @@ flowchart TD;
  
 ## Demonstrasi <br>
 Memasukkan ID transaksi: <br>
-![id](https://imgur.com/a/FZH8uB1)
+input:![Screenshot_1](https://user-images.githubusercontent.com/119667963/217310973-e2686b6d-69f4-4e54-b41e-5ccc30a1823f.png)
 
   1. Menambah item: add_item() <br>
      input: <br>
@@ -156,7 +156,8 @@ Memasukkan ID transaksi: <br>
        Item Lele telah ditambahkan ke dalam daftar pesanan.
       
       Melihat harga akhir & perolehan diskon: total_price()
-       input:
+       
+
         id_1.total_price("Yudis")
        output:
         Pesanan atas nama: Yudis     
