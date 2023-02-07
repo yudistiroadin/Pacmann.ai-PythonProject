@@ -66,7 +66,7 @@ flowchart TD;
     trnsct_123 = Transaction(), memulai class Transaction
    
 ### 2. Menambah item yang akan dibeli <br>
-    add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli:   
+    add_item([nama item, jumlah item, harga per item])
    * nama item(tipe: string)    = nama dari item yang hendak dibeli <br>
    * jumlah item(tipe: int)     = jumlah item yang akan dibeli <br>
    * harga per item(tipe: int)  = harga/item terkait <br>
@@ -91,7 +91,7 @@ flowchart TD;
    * nama item(string)         = nama item yang ingin dihapus <br>
 
 ### 7. Menghapus semua atau mengulang transaksi <br>
-    reset_transaction() <br>
+    reset_transaction()
    
 ### 8. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary <br>
     check_order()
@@ -110,7 +110,7 @@ flowchart TD;
  
 ## Demonstrasi <br>
 Memasukkan ID transaksi: <br>
-id_1 = Transaction("Yudis") <br>
+![id](https://imgur.com/a/FZH8uB1)
 
   1. Menambah item: add_item() <br>
      input: <br>
@@ -118,11 +118,6 @@ id_1 = Transaction("Yudis") <br>
       id_1.add_item("Pasta Gigi", 3, 15_000) <br>
      output: <br>
             
-            Nama item Jumlah item Harga item  Total harga
-       1      Ayam Goreng         2.0    20000.0      40000.0
-       2       Pasta Gigi         3.0    15000.0      45000.0
-       Total            -           -          -      85000.0
-       Item Pasta Gigi telah ditambahkan ke dalam daftar pesanan.
     
   2. Menghapus item: delete_item()
       input:
