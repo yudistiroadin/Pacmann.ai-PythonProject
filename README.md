@@ -165,11 +165,16 @@ Import module & memasukkan ID transaksi: <br>
 ![Screenshot_18](https://user-images.githubusercontent.com/119667963/217322581-78db85c0-a935-421e-856a-101542fbec1b.png)<br>
       output:<br>
 ![Screenshot_19](https://user-images.githubusercontent.com/119667963/217322616-6e835b1d-e299-4bb0-9c5c-df1bf5591d26.png)<br>
-    Cek kembali pesanan: check_order()<br>
       input:<br>
 ![Screenshot_20](https://user-images.githubusercontent.com/119667963/217323931-bf4f6078-3089-4518-ab46-62a5050100a5.png)<br>
       output:<br>
 ![Screenshot_21](https://user-images.githubusercontent.com/119667963/217323962-520361dd-19a0-42ec-8e5e-775e7f933f2b.png)
+  9. Menambahkan item dengan nama yang sudah ada sebelumnya
+      input:
+![Screenshot_22](https://user-images.githubusercontent.com/119667963/217333739-064cd982-48d6-4576-a36b-618a9570e936.png)
+      output:
+![Screenshot_23](https://user-images.githubusercontent.com/119667963/217335018-defacb35-32d0-4a43-8b02-02829e717400.png)
+
 
 
 ## Kesimpulan <br>
