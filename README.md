@@ -170,3 +170,13 @@ Import module & memasukkan ID transaksi: <br>
 ![Screenshot_20](https://user-images.githubusercontent.com/119667963/217323931-bf4f6078-3089-4518-ab46-62a5050100a5.png)<br>
       output:<br>
 ![Screenshot_21](https://user-images.githubusercontent.com/119667963/217323962-520361dd-19a0-42ec-8e5e-775e7f933f2b.png)
+
+
+## Kesimpulan <br>
+Modul supercashier.py yang telah dirancang dapat menjalankan berbagai method yang diperlukan sesuai dengan requirement yang diberikan, membantu baik pembeli maupun penjual mulai dari merekap aktifitas transaksinya, melakukan kroscek input, total belanja & capaian diskon dst., dengan catatan: <br>
+* Setiap method yang telah dirancang dapat berjalan sesuai fungsi yang diharapkan;
+* Try-branching yang dirancang dapat mengantisipasi error yang mungkin terjadi selama input transaksi;
+* Code module dirancang dengan kaidah PEP8;
+* Modular code, yang terdiri dari berbagai fungsi dengan tugasnya masing-masing;
+* 
+      
