@@ -71,12 +71,12 @@ flowchart TD;
    * jumlah item(tipe: int)     = jumlah item yang akan dibeli <br>
    * harga per item(tipe: int)  = harga/item terkait <br>
 
-### 3. Mengubah nama item: <br>
+### 3. Mengubah nama item <br>
     update_item_name([nama item, update nama item])
    * nama item(string)          = nama item yang namanya ingin diganti <br>
    * update nama item(string)   = nama baru item <br>
     
-### 4. Mengubah jumlah item: <br>
+### 4. Mengubah jumlah item <br>
     update_item_qty([nama item, update jumlah item])
    * nama item(string)          = nama item yang jumlahnya ingin diganti <br>
    * update jumlah item(int)    = jumlah baru item <br>
