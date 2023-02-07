@@ -62,61 +62,61 @@ flowchart TD;
 ```
 ## Fungsi yang dipakai
 
-### 1. Customer membuat ID transaksi
-   trnsct_123 = Transaction(), memulai class Transaction
+### 1. Customer membuat ID transaksi <br>
+    trnsct_123 = Transaction(), memulai class Transaction
    
-### 2. Menambah item yang akan dibeli
-   add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli: <br>
+### 2. Menambah item yang akan dibeli <br>
+    add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli: <br>
    
    * nama item(tipe: string)    = nama dari item yang hendak dibeli <br>
    * jumlah item(tipe: int)     = jumlah item yang akan dibeli <br>
    * harga per item(tipe: int)  = harga/item terkait <br>
 
-### 3. Mengubah, memperbaiki daftar pembelian
-   a. Mengubah nama item <br>
-   update_item_name([nama item, update nama item]) <br>
-    nama item(string)          = nama item yang namanya ingin diganti <br>
-    update nama item(string)   = nama baru item <br>
+### 3. Mengubah, memperbaiki daftar pembelian: <br>
+   a. Mengubah nama item: <br>
+    * update_item_name([nama item, update nama item]) <br>
+    * nama item(string)          = nama item yang namanya ingin diganti <br>
+    * update nama item(string)   = nama baru item <br>
     
-   b. Mengubah jumlah item
-   update_item_qty([nama item, update jumlah item])
-    nama item(string)          = nama item yang jumlahnya ingin diganti
-    update jumlah item(int)    = jumlah baru item 
+   b. Mengubah jumlah item: <br>
+    * update_item_qty([nama item, update jumlah item]) <br>
+    * nama item(string)          = nama item yang jumlahnya ingin diganti <br>
+    * update jumlah item(int)    = jumlah baru item <br>
   
-   c. Mengubah harga item
-   update_item_price([nama item, update harga item])
-    nama item(string)          = nama item yang harganya ingin diganti
-    update harga item(int)     = harga baru item
+   c. Mengubah harga item: <br>
+    * update_item_price([nama item, update harga item]) <br>
+    * nama item(string)          = nama item yang harganya ingin diganti <br>
+    * update harga item(int)     = harga baru item <br>
    
-### 4. Membatalkan pembelian item
-   a. Menghapus salah satu item:
-   delete_item(nama item)
-    nama item(string)         = nama item yang ingin dihapus
-   b. Menghapus semua atau mengulang transaksi
-   reset_transaction()
+### 4. Membatalkan pembelian item <br>
+   a. Menghapus salah satu item: <br>
+    delete_item(nama item): <br>
+    * nama item(string)         = nama item yang ingin dihapus <br>
+   b. Menghapus semua atau mengulang transaksi: <br>
+    * reset_transaction() <br>
    
-### 5. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary
-  check_order(), dengan ketentuan:
-  a. Jika tidak ada kesalahan input, maka muncul pesan "Jumlah & harga item sudah sesuai.";
-  b. Jika ada kesalahan input, maka muncul pesan "Warning: Jumlah item tidak boleh minus!" & "Warning: Harga item tidak boleh minus!";
-  c. Setelah memvalidasi input, keluarlah output pesanan yang sudah dibeli.
+### 5. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary <br>
+  check_order(), dengan ketentuan: <br>
+  a. Jika tidak ada kesalahan input, maka muncul pesan "Jumlah & harga item sudah sesuai."; <br>
+  b. Jika ada kesalahan input, maka muncul pesan "Warning: Jumlah item tidak boleh minus!" & "Warning: Harga item tidak boleh minus!"; <br>
+  c. Setelah memvalidasi input, keluarlah output pesanan yang sudah dibeli. <br>
   
-### 6. Setelah pengecekan, customer menghitung total belanja
-  total_price(), dengan ketentuan jika:
-  a. Total belanja <= Rp. 200.000, maka tidak mendapatkan diskon;
-  b. Total belanja >Rp. 200.000, maka diskon 5%;
-  c. Total belanja >Rp. 300.000, maka diskon 8%;
-  d. Total belanja >Rp. 500.000, maka diskon 10%.
+### 6. Setelah pengecekan, customer menghitung total belanja <br>
+  total_price(), dengan ketentuan jika: <br>
+  a. Total belanja <= Rp. 200.000, maka tidak mendapatkan diskon; <br>
+  b. Total belanja >Rp. 200.000, maka diskon 5%; <br>
+  c. Total belanja >Rp. 300.000, maka diskon 8%; <br>
+  d. Total belanja >Rp. 500.000, maka diskon 10%. <br>
  
-## Demonstrasi
-Memasukkan ID transaksi:
-id_1 = Transaction("Yudis")
+## Demonstrasi <br>
+Memasukkan ID transaksi: <br>
+id_1 = Transaction("Yudis") <br>
 
-  1. Menambah item: add_item()
-     input:
-      id_1.add_item("Ayam Goreng", 2, 20_000)
-      id_1.add_item("Pasta Gigi", 3, 15_000)   
-     output:
+  1. Menambah item: add_item() <br>
+     input: <br>
+      id_1.add_item("Ayam Goreng", 2, 20_000) <br>
+      id_1.add_item("Pasta Gigi", 3, 15_000) <br>
+     output: <br>
             
             Nama item Jumlah item Harga item  Total harga
        1      Ayam Goreng         2.0    20000.0      40000.0
