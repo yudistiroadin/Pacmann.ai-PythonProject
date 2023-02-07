@@ -116,7 +116,7 @@ Import module & memasukkan ID transaksi: <br>
      input: <br>
 ![Screenshot_2](https://user-images.githubusercontent.com/119667963/217313621-1d7a0f26-fe67-4bc7-b767-898c1eadf3e7.png)
      output: <br>
-![Screenshot_3](https://user-images.githubusercontent.com/119667963/217313746-8c31cf3a-2c5d-4e40-a86a-e05443224bca.png)<br>
+![Screenshot_3](https://user-images.githubusercontent.com/119667963/217332054-17710519-7098-45bd-81ff-a9cbd09769b5.png)<br>
 
   2. Menghapus item: delete_item() <br>
       input: <br>
