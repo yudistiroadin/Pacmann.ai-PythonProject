@@ -66,16 +66,16 @@ flowchart TD;
    trnsct_123 = Transaction(), memulai class Transaction
    
 ###### 2. Menambah item yang akan dibeli
-   add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli
-   nama item(tipe: string)    = nama dari item yang hendak dibeli
-   jumlah item(tipe: int)     = jumlah item yang akan dibeli
-   harga per item(tipe: int)  = harga/item terkait
+   add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli <br>
+   nama item(tipe: string)    = nama dari item yang hendak dibeli <br>
+   jumlah item(tipe: int)     = jumlah item yang akan dibeli <br>
+   harga per item(tipe: int)  = harga/item terkait <br>
 
 ###### 3. Mengubah, memperbaiki daftar pembelian
-   a. Mengubah nama item
-   update_item_name([nama item, update nama item])
-    nama item(string)          = nama item yang namanya ingin diganti
-    update nama item(string)   = nama baru item
+   a. Mengubah nama item <br>
+   update_item_name([nama item, update nama item]) <br>
+    nama item(string)          = nama item yang namanya ingin diganti <br>
+    update nama item(string)   = nama baru item <br>
     
    b. Mengubah jumlah item
    update_item_qty([nama item, update jumlah item])
