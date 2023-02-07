@@ -180,8 +180,7 @@ Import module & memasukkan ID transaksi: <br>
 ## Kesimpulan <br>
 Modul supercashier.py yang telah dirancang dapat menjalankan berbagai method yang diperlukan sesuai dengan requirement yang diberikan, membantu baik pembeli maupun penjual mulai dari merekap aktifitas transaksinya, melakukan kroscek input, total belanja & capaian diskon dst., dengan catatan: <br>
 * Setiap method yang telah dirancang dapat berjalan sesuai fungsi yang diharapkan;
-* Try-branching yang dirancang dapat mengantisipasi error yang mungkin terjadi selama input transaksi;
+* Try-branching yang dirancang dapat mengantisipasi nilai tidak wajar dan duplikat yang mungkin terjadi selama input transaksi;
 * Code module dirancang dengan kaidah PEP8;
-* Modular code, yang terdiri dari berbagai fungsi dengan tugasnya masing-masing;
-* 
+* Modular code (.py), yang terdiri dari berbagai fungsi dengan tugasnya masing-masing.
       
