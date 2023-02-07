@@ -152,7 +152,7 @@ Import module & memasukkan ID transaksi: <br>
       input:<br>
 ![Screenshot_14](https://user-images.githubusercontent.com/119667963/217321660-d1731442-adb8-491f-8585-777c97cd3e0b.png)<br>
       output:<br>
-![Screenshot_15](https://user-images.githubusercontent.com/119667963/217321681-ba588399-b849-4375-8546-425c863f5695.png)<br>
+![Screenshot_15](https://user-images.githubusercontent.com/119667963/217325258-5d9d2ce6-7b80-4a1d-ad9c-1ffc0c321816.png)
        
   7. Memperbaiki nilai jumlah item: update_item_qty()<br>
       input:<br>
