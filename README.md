@@ -109,16 +109,15 @@ flowchart TD;
   d. Total belanja >Rp. 500.000, maka diskon 10%. <br>
  
 ## Demonstrasi <br>
-Import modul & memasukkan ID transaksi: <br>
-input:![Screenshot_1](https://user-images.githubusercontent.com/119667963/217310973-e2686b6d-69f4-4e54-b41e-5ccc30a1823f.png)
+Import module & memasukkan ID transaksi: <br>
+![Screenshot_1](https://user-images.githubusercontent.com/119667963/217313577-92261e1d-37d2-4089-a974-6a7be73e7887.png)
 
   1. Menambah item: add_item() <br>
      input: <br>
-      id_1.add_item("Ayam Goreng", 2, 20_000) <br>
-      id_1.add_item("Pasta Gigi", 3, 15_000) <br>
+![Screenshot_2](https://user-images.githubusercontent.com/119667963/217313621-1d7a0f26-fe67-4bc7-b767-898c1eadf3e7.png)
      output: <br>
-            
-    
+![Screenshot_3](https://user-images.githubusercontent.com/119667963/217313746-8c31cf3a-2c5d-4e40-a86a-e05443224bca.png)
+
   2. Menghapus item: delete_item()
       input:
        id_1.delete_item("Pasta Gigi")
