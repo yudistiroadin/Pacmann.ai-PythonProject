@@ -109,7 +109,7 @@ flowchart TD;
   d. Total belanja >Rp. 500.000, maka diskon 10%. <br>
  
 ## Demonstrasi <br>
-Memasukkan ID transaksi: <br>
+Import modul & memasukkan ID transaksi: <br>
 input:![Screenshot_1](https://user-images.githubusercontent.com/119667963/217310973-e2686b6d-69f4-4e54-b41e-5ccc30a1823f.png)
 
   1. Menambah item: add_item() <br>
