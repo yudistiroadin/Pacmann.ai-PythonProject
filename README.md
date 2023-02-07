@@ -62,16 +62,16 @@ flowchart TD;
 ```
 ## Fungsi yang dipakai
 
-###### 1. Customer membuat ID transaksi
+### 1. Customer membuat ID transaksi
    trnsct_123 = Transaction(), memulai class Transaction
    
-###### 2. Menambah item yang akan dibeli
+### 2. Menambah item yang akan dibeli
    add_item([nama item, jumlah item, harga per item]), menambah barang yang akan dibeli <br>
-   nama item(tipe: string)    = nama dari item yang hendak dibeli <br>
-   jumlah item(tipe: int)     = jumlah item yang akan dibeli <br>
-   harga per item(tipe: int)  = harga/item terkait <br>
+   *nama item(tipe: string)    = nama dari item yang hendak dibeli <br>
+   *jumlah item(tipe: int)     = jumlah item yang akan dibeli <br>
+   *harga per item(tipe: int)  = harga/item terkait <br>
 
-###### 3. Mengubah, memperbaiki daftar pembelian
+### 3. Mengubah, memperbaiki daftar pembelian
    a. Mengubah nama item <br>
    update_item_name([nama item, update nama item]) <br>
     nama item(string)          = nama item yang namanya ingin diganti <br>
@@ -87,20 +87,20 @@ flowchart TD;
     nama item(string)          = nama item yang harganya ingin diganti
     update harga item(int)     = harga baru item
    
-###### 4. Membatalkan pembelian item
+### 4. Membatalkan pembelian item
    a. Menghapus salah satu item:
    delete_item(nama item)
     nama item(string)         = nama item yang ingin dihapus
    b. Menghapus semua atau mengulang transaksi
    reset_transaction()
    
-###### 5. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary
+### 5. Melakukan cek / memvalidasi dan menampilkan semua pesanan dalam dictionary
   check_order(), dengan ketentuan:
   a. Jika tidak ada kesalahan input, maka muncul pesan "Jumlah & harga item sudah sesuai.";
   b. Jika ada kesalahan input, maka muncul pesan "Warning: Jumlah item tidak boleh minus!" & "Warning: Harga item tidak boleh minus!";
   c. Setelah memvalidasi input, keluarlah output pesanan yang sudah dibeli.
   
-###### 6. Setelah pengecekan, customer menghitung total belanja
+### 6. Setelah pengecekan, customer menghitung total belanja
   total_price(), dengan ketentuan jika:
   a. Total belanja <= Rp. 200.000, maka tidak mendapatkan diskon;
   b. Total belanja >Rp. 200.000, maka diskon 5%;
