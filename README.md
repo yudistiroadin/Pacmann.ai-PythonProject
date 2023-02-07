@@ -110,114 +110,63 @@ flowchart TD;
  
 ## Demonstrasi <br>
 Import module & memasukkan ID transaksi: <br>
-![Screenshot_1](https://user-images.githubusercontent.com/119667963/217313577-92261e1d-37d2-4089-a974-6a7be73e7887.png)
+![Screenshot_1](https://user-images.githubusercontent.com/119667963/217313577-92261e1d-37d2-4089-a974-6a7be73e7887.png)<br>
 
   1. Menambah item: add_item() <br>
      input: <br>
 ![Screenshot_2](https://user-images.githubusercontent.com/119667963/217313621-1d7a0f26-fe67-4bc7-b767-898c1eadf3e7.png)
      output: <br>
-![Screenshot_3](https://user-images.githubusercontent.com/119667963/217313746-8c31cf3a-2c5d-4e40-a86a-e05443224bca.png)
+![Screenshot_3](https://user-images.githubusercontent.com/119667963/217313746-8c31cf3a-2c5d-4e40-a86a-e05443224bca.png)<br>
 
-  2. Menghapus item: delete_item()
-      input:
-       id_1.delete_item("Pasta Gigi")
-      output:
-             Nama item Jumlah item Harga item  Total harga
-       1      Ayam Goreng         2.0    20000.0      40000.0
-       Total            -           -          -      40000.0
-       Item Pasta Gigi telah dihapus dari daftar pesanan.
+  2. Menghapus item: delete_item() <br>
+      input: <br>
+![Screenshot_4](https://user-images.githubusercontent.com/119667963/217314616-4124f607-091f-43a4-a82a-3bca9b105f63.png)
+      output: <br>
+![Screenshot_5](https://user-images.githubusercontent.com/119667963/217314870-f235879b-4c7b-48a0-bd83-0379fe8f6af5.png)<br>
       
-  3. Mengatur ulang transaksi: reset_transaction()
-      input:
-       id_1.reset_transaction("Yudis")
-      output:
-       Semua pesanan sudah dikosongkan.
+  3. Mengatur ulang transaksi: reset_transaction()<br>
+      input:<br>
+![Screenshot_6](https://user-images.githubusercontent.com/119667963/217316039-8dfaa3c9-efcd-4b97-b977-5f0bdf7a46cd.png)<br>
+      output:<br>
+![Screenshot_7](https://user-images.githubusercontent.com/119667963/217316090-06c08d4c-ca00-4e9d-970e-1623e940b55f.png)<br>
       
-  4. Mengecek pesanan, memastikan sudah dikosongkan: check_order()
-      input:
-       id_1.check_order("Yudis")
-      output:
-             Nama item Jumlah item Harga item  Total harga
-       Total         -           -          -          0.0
+  4. Mengecek pesanan, memastikan sudah dikosongkan: check_order()<br>
+      input:<br>
+![Screenshot_8](https://user-images.githubusercontent.com/119667963/217316288-c8aee87a-7b49-4773-9164-62da49b62e06.png)<br>
+      output:<br>
+![Screenshot_9](https://user-images.githubusercontent.com/119667963/217316319-ce1b66ce-0b48-499b-8607-fceb4cba51a0.png)<br>
       
-  5. Mengecek harga akhir & perolehan diskon
-     Isi kembali pesanan
-      input:
-       id_1.add_item("Ayam Kampung", 20, 85_000)
-       id_1.add_item("Kambing", 10, 6_000_000)
-       id_1.add_item("Lele", 500, 2_500)
-      output:
-              Nama item Jumlah item Harga item  Total harga
-       1      Ayam Kampung        20.0    85000.0    1700000.0
-       2           Kambing        10.0  6000000.0   60000000.0
-       3              Lele       500.0     2500.0    1250000.0
-       Total             -           -          -   62950000.0
-       Item Lele telah ditambahkan ke dalam daftar pesanan.
-      
-      Melihat harga akhir & perolehan diskon: total_price()
-       
-
-        id_1.total_price("Yudis")
-       output:
-        Pesanan atas nama: Yudis     
-        Selamat! Pembeli a/n Yudis mendapat diskon sebesar 10%
-        Jumlah harga belanja sebelum diskon sebesar: Rp. 62,950,000
-        Besar nominal diskon yang didapat sebesar  : Rp. 6,295,000.0
-        Harga setelah diskon menjadi sebesar       : Rp. 56,655,000.0
+  5. Mengecek harga akhir & perolehan diskon<br>
+     * Isi kembali pesanan<br>
+      input:<br>
+![Screenshot_10](https://user-images.githubusercontent.com/119667963/217317115-ad4d6ac4-e5cd-4dd7-a38f-beb4bc811f6c.png)<br>
+      output:<br>
+![Screenshot_11](https://user-images.githubusercontent.com/119667963/217317152-5d4b2a79-d995-4105-8d7a-eabcacf7f9b5.png)<br>
+     * Melihat harga akhir & perolehan diskon: total_price()<br>
+      input:<br>
+![Screenshot_12](https://user-images.githubusercontent.com/119667963/217319069-f6a80565-aaa3-42ec-855e-98fe900ae875.png)<br>
+      output:<br>
+![Screenshot_13](https://user-images.githubusercontent.com/119667963/217319333-0e03609e-b6fe-41b0-91a3-601e1844365e.png)<br>
    
-  6. Jika ada nilai belanjaan yang tidak wajar (misal jumlah atau harga minus)
-      input:
-       id_1.add_item("Sapi", -20, -15_000_000)
-       id_1.check_order("Yudis")
-      output:
-                 Nama item Jumlah item  Harga item  Total harga
-       1      Ayam Kampung        20.0     85000.0    1700000.0
-       2           Kambing        10.0   6000000.0   60000000.0
-       3              Lele       500.0      2500.0    1250000.0
-       4              Sapi       -20.0 -15000000.0  300000000.0
-       Total             -           -           -  362950000.0
-       Item Sapi telah ditambahkan ke dalam daftar pesanan.
+  6. Jika ada nilai belanjaan yang tidak wajar (misal jumlah atau harga minus)<br>
+      input:<br>
+![Screenshot_14](https://user-images.githubusercontent.com/119667963/217321660-d1731442-adb8-491f-8585-777c97cd3e0b.png)<br>
+      output:<br>
+![Screenshot_15](https://user-images.githubusercontent.com/119667963/217321681-ba588399-b849-4375-8546-425c863f5695.png)<br>
        
-                 Nama item Jumlah item  Harga item  Total harga
-       1      Ayam Kampung        20.0     85000.0    1700000.0
-       2           Kambing        10.0   6000000.0   60000000.0
-       3              Lele       500.0      2500.0    1250000.0
-       4              Sapi       -20.0 -15000000.0  300000000.0
-       Total             -           -           -  362950000.0
-       Warning: Jumlah item tidak boleh minus!
-       Warning: Harga item tidak boleh minus!
+  7. Memperbaiki nilai jumlah item: update_item_qty()<br>
+      input:<br>
+![Screenshot_16](https://user-images.githubusercontent.com/119667963/217322515-5dd8712e-0899-4a37-bcd9-0c757f1fd4e6.png)<br>
+      output:<br>
+![Screenshot_17](https://user-images.githubusercontent.com/119667963/217322544-ef6f4894-ea4a-453e-ad5a-d3b68f121c04.png)<br>
        
-  7. Memperbaiki nilai jumlah item: update_item_qty()
-      input:
-       id_1.update_item_qty("Sapi", 20)
-      output:
-                 Nama item Jumlah item  Harga item  Total harga
-       1      Ayam Kampung        20.0     85000.0    1700000.0
-       2           Kambing        10.0   6000000.0   60000000.0
-       3              Lele       500.0      2500.0    1250000.0
-       4              Sapi        20.0 -15000000.0 -300000000.0
-       Total             -           -           - -237050000.0
-       Jumlah item Sapi telah diubah menjadi sebanyak 20.
-       
-  8. Memperbaiki nilai harga item: update_item_price()
-      input:
-       id_1.update_item_price("Sapi", 15_000_000)
-      output:
-              Nama item Jumlah item  Harga item  Total harga
-       1      Ayam Kampung        20.0     85000.0    1700000.0
-       2           Kambing        10.0   6000000.0   60000000.0
-       3              Lele       500.0      2500.0    1250000.0
-       4              Sapi        20.0  15000000.0  300000000.0
-       Total             -           -           -  362950000.0
-       Harga item Sapi telah diubah menjadi sebesar Rp. 15,000,000.
-     Cek kembali pesanan: check_order()
-      input:
-       id_1.check_order("Yudis")
-      output:
-              Nama item Jumlah item  Harga item  Total harga
-       1      Ayam Kampung        20.0     85000.0    1700000.0
-       2           Kambing        10.0   6000000.0   60000000.0
-       3              Lele       500.0      2500.0    1250000.0
-       4              Sapi        20.0  15000000.0  300000000.0
-       Total             -           -           -  362950000.0
-       Jumlah & harga item sudah sesuai.
+  8. Memperbaiki nilai harga item: update_item_price()<br>
+      input:<br>
+![Screenshot_18](https://user-images.githubusercontent.com/119667963/217322581-78db85c0-a935-421e-856a-101542fbec1b.png)<br>
+      output:<br>
+![Screenshot_19](https://user-images.githubusercontent.com/119667963/217322616-6e835b1d-e299-4bb0-9c5c-df1bf5591d26.png)<br>
+    Cek kembali pesanan: check_order()<br>
+      input:<br>
+![Screenshot_20](https://user-images.githubusercontent.com/119667963/217323931-bf4f6078-3089-4518-ab46-62a5050100a5.png)<br>
+      output:<br>
+![Screenshot_21](https://user-images.githubusercontent.com/119667963/217323962-520361dd-19a0-42ec-8e5e-775e7f933f2b.png)
