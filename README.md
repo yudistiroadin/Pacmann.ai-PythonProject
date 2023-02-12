@@ -6,7 +6,7 @@ Super cashier merupakan sistem kasir swalayan, di mana pelanggan dapat mencantum
 
 Ketentuan yang diberlakukan yaitu: Modular code, clean code (PEP8), dokumentasi Docstring (menjelaskan makna code), try-error untuk track error, dapat menggunakan library Python.
 
-## Persyaratan atau Obyektif
+## Persyaratan
 Alur belanja pada Super Cashier adalah sebagai berikut:
 1. Customer membuat ID transaksi customer;
 2. Customer memasukkan nama, jumlah dan harga barang yang dibeli;
