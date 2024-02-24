@@ -45,7 +45,7 @@ flowchart TD;
     I-->J{input sudah benar?};
     J--Ya, pemesanan sudah benar-->K[menghitung total belanja: total_price];
     J--Tidak, terdapat kesalahan input data-->E;
-    K-->L{total belanja`<`200.000?};
+    K-->L{total belanja&lt;200.000?};
     L--Ya-->M[tidak mendapatkan diskon];
     M-->V(( ));
     L--Tidak-->N{total belanja>200.000>=300.000?};
